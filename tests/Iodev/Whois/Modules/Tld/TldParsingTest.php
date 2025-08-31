@@ -350,6 +350,7 @@ class TldParsingTest extends TestCase
             [ "free.com", ".com/free.txt", null ],
             [ "google.com", ".com/google.com.txt", ".com/google.com.json" ],
             [ "google.com", ".com/google.com_registrar_whois.txt", ".com/google.com_registrar_whois.json" ],
+            [ "semihkoyuturk.com", ".com/semihkoyuturk.com.txt", ".com/semihkoyuturk.com.json" ],
 
             // .CR
             [ "free.cr", ".cr/free.txt", null ],
