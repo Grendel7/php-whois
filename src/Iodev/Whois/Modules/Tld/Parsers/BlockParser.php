@@ -434,6 +434,17 @@ class BlockParser extends CommonParser
                 }
             }
         }
+        foreach ($sel->getAll() as $value) {
+            $strs = is_array($value) ? $value : [$value];
+            foreach ($strs as $str) {
+                if ($str && preg_match($fallbackRegex, $str)) {
+                    $time = DateHelper::parseDateInText($str);
+                    if (!empty($time)) {
+                        return $time;
+                    }
+                }
+            }
+        }
         return 0;
     }
 
